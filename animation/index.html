@@ -1,0 +1,38 @@
+<html> 
+
+<head>
+</head>
+<body>
+
+<div id="container">
+            
+            <h1>Brendan McIlhenny</h1>       
+            <h3 id = "test">Calculating</h3>
+ </div>      
+
+<script type="text/javascript">
+        
+        document.addEventListener('DOMContentLoaded', calculating(0), false)
+        
+        function calculating(i) {
+            setTimeout(function () {
+                var el = document.getElementById('test');
+                if (i !== 3) {
+                    el.innerHTML += ".";
+                    ++i;
+                }
+                else {
+                    el.innerHTML = "Calculating"
+                    i = i - 3;
+                }
+                calculating(i);
+                
+            }, 1000);
+        }
+        
+        
+                
+    </script>
+    
+    </body>
+    </html>
