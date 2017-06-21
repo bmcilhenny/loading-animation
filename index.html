@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Piguson</title>
+        <link href="" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+        
+        <style type="text/css">
+            
+            body {
+                background-color: black;
+            }
+            
+            #container { 
+                min-width: 320px;
+                margin: 200px, auto, 200px, auto;
+                text-align: center;
+                border:4px double #000;
+                font-family: 'Orbitron', sans-serif;
+                color: #35e500;
+            }
+            
+            h1 {
+                font-size: 400%;
+            }
+            
+            h3 {
+                font-size: 200%;
+            }
+            
+            #first-list-container {
+                text-align: center;
+            
+            }
+            
+            #second-list-container {
+                text-align: center;
+            
+            }
+            
+            #third-list-container {
+                text-align: center;
+            
+            }
+            
+            img {
+                width: 50px;
+            }
+        
+        
+        </style>
+
+    </head>
+    
+    <body>
+        
+        <div id="container">
+            
+            <h1>Brendan McIlhenny</h1>
+            <p id = "msg">Unlock</p>
+            <img id = fingerPrint src="green-fingerprint.svg.hi.png">
+            <p id = "calculatingMsg">Calculating</p>
+            <h3 id = "test">Calculating</h3>
+            
+            <!--
+            
+            <div id="first-list-container">
+                <h3>Status</h3>
+                    <h4>Hours since career change: <span id="demo">Calculating</span></h4>
+                    <h4> Number of languages learning: <span id="arrayDisplay"> Calculating</span> <span id ="fingerPrint"><img src = "" alt-text "hover over finger print to trigger"></span></h4>
+            </div>
+            
+            <div id="second-list-container">
+                <h3>Language Learning Status</h3>
+                    <h4>Javascript</h4>
+                    <h4>Ruby</h4>
+                    <h4>CSS</h4>
+                    <h4>HTML</h4>
+                <h3>Next Chapter</h3>
+                    <h4>PHP</h4>
+                    <h4>MySQL</h4>
+            </div>
+
+            <div id="third-list-container">
+                <h3>Projects</h3>
+                     <h4><a href="">Concept Noise</a></h4>
+            </div> -->
+        
+        </div>
+            
+    </body>
+    
+    <script type="text/javascript">
+        
+        /*
+        
+        var today = new Date();
+        var year = today.getFullYear();
+        var est = new Date('Apr 04, 2017 00:00:00');
+        var difference = today.getTime() - est.getTime();
+        difference = (difference/3600000);
+        
+        var elDemo = document.getElementById('demo');
+        elDemo.textContent = Math.floor(difference) + ' hours'; 
+        
+       
+        
+        function unlock() {
+            var msg = document.getElementById('msg')
+            
+            msg.innerHTML = 'Unlocked!';
+            
+            var i;
+            var calculatingMsg = document.getElementById('calculatingMsg');
+            for (i = 0; i < 3; i++) {
+                calculatingMsg.innerHTML +="."
+                }
+            if (i = 2) {
+                
+            }
+        
+
+        
+        var elFingerPrint = document.getElementById('fingerPrint');
+        elFingerPrint.addEventListener('mouseover', unlock, false);
+        
+        
+                
+                /*
+                for (i = 2, i > 1, i--) {
+                var msg = document.getElementById('calculatingMsg');
+                msg.slice() */
+        
+        /*document.addEventListener('DOMContentLoaded', function theloop(2), false);*/
+
+        
+        /*(function theLoop (i) {
+            setTimeout(function () {
+                var el = document.getElementById('test');
+                el.innerHTML += ".";
+                if (i--) {         
+                    theLoop(i);
+                }
+            }, 1000);
+        })(2);*/
+        
+        document.addEventListener('DOMContentLoaded', calculating(0), false)
+        
+        function calculating(i) {
+            setTimeout(function () {
+                var el = document.getElementById('test');
+                if (i !== 3) {
+                    el.innerHTML += ".";
+                    ++i;
+                }
+                else {
+                    el.innerHTML = "Calculating"
+                    i = i - 3;
+                }
+                calculating(i);
+                
+            }, 1000);
+        }
+        
+        
+                
+    </script>
+    
+</html>
